@@ -72,7 +72,78 @@ namespace COMP003A.LectureActivity7
             // similar to arrays, you can use the syntac below:
             // listName [indexNumber] to access a specific content in the collection
             Console.WriteLine($"alphabet[0]: {alphabet[0] }");
-            Console.WriteLine$
+            Console.WriteLine($"alphabet[2]: {alphabet[2]}");
+            Console.WriteLine($"alphabet[4]: {alphabet[4]}");
+
+            alphabet.Remove('C'); // removes a specific value somewhere inside the collection
+            Console.WriteLine("\nContents of alphabet after removing 'C':");
+            ListTraversal (alphabet);
+        }
+
+        /// <summary>
+        /// Section separator method
+        /// </summary>
+        /// <param name="SectionSeparator"(string section)
+        static void SectionSeparator(string section)
+        {
+            Console.WriteLine("".PadRight(50,'*')+$"\n\t\t{section} Section\n"+"". PadRight(50,'*'));
+        }
+
+        /// <summarry>
+        /// Array traversal
+        /// </summarry>
+        /// <param name="array">Integer array to traverse</param>
+        static void ArrayTraversal(int[] array)
+        {
+            // you can use a for-loop or other looping statements for array traversals
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.WriteLine($"Array at index {i}: {array[i]}");
+            }
+        }
+
+        /// <summary>
+        /// Array traversal
+        /// </summary>
+        /// <param name="array">String input</param>
+        static void ArrayTraversal(string array)
+        {
+            //you can use a for-loop or other looping statements for array traversals
+            for (int i = 0;i < array.Length;i++)
+            {
+                Console.WriteLine($"Array at index {i}: {array[i]}");
+            }
+        }
+
+        /// <summary>
+        /// Average grade calculator
+        /// </summary>
+        /// <param name="array">Integer array input</param>
+        /// <returns></returns>
+        static double GetAverage(int[] array)
+        {
+            int runningTotal = 0;
+
+            // if you are not planning to manipulate the contents of the array,
+            // you can use a foreach loop
+            foreach (int item in array) 
+            { 
+                runningTotal += item; // adds the value of the current item to the runningTotal
+            }
+            return runningTotal / array.Length; // returns the average
+        }
+
+        /// <summary>
+        /// List traversal using a foreach loop
+        /// </summary>
+        /// <param name="list">Character list input</param>
+        static void ListTraversal(List<char> list)
+        {
+            // you can use a foreach-loop or other looping statements for list traversals
+            foreach (var item in list)
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }
